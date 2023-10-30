@@ -5,15 +5,18 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
+    "clean": "git restore docs/build/*",
     "dev": "rollup -c -w",
     "start": "sirv docs --no-clear",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "licenses": "npx generate-license-file --input package.json --output third-party-licenses.txt --overwrite"
   },
   "keywords": [
     "svelte"
   ],
   "license": "MIT",
   "dependencies": {
+    "generate-license-file": "^2.0.0",
     "sirv-cli": "^2.0.2"
   },
   "devDependencies": {
